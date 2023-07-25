@@ -26,7 +26,7 @@ def main():
                     return 'Accordé'
                 else:
                     return 'Non accordé'
-            st.write('Réponse à la demande de prêt :', result_loan(df['result'].item()))
+            st.write('Réponse à la demande de prêt :', result_loan(df['proba'].item()))
             response3 = requests.get('http://localhost:5000/api/shap_features')
             data2 = response3.json()
             df_shap = pd.DataFrame(data2)

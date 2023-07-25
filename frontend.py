@@ -22,7 +22,7 @@ def main():
         if st.button('Prédire'):
             st.write('Probabilité de remboursement :', f"{round(round(df['proba'].item(), 2)*100)}%")
             def result_loan(x):
-                if x >= 0.65:
+                if x >= 0.6:
                     return 'Accordé'
                 else:
                     return 'Non accordé'

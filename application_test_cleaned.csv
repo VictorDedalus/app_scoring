@@ -1,0 +1,11 @@
+,SK_ID_CURR,Type de revenu,Rapport prêt-valeur,Emploi de plus de 5 ans,Type d'emploi,Densité de la région de résidence,Niveau d'étude,Entourage avec défaut de plus de 30j,Type d'entreprise,Pourcentage de temps comme employé,Statut familial,Voiture possédée,Delta Application-Changement de télephone,Télephone maison fourni,Nb de demandes au bureau de crédit (1 an)
+0,100001,Working,1.264,1,Core staff,0.01885,Higher education,0.0,Kindergarten,0.1210436048022452,Married,N,-1740.0,0,0.0
+1,100005,Working,1.2376,1,Low-skill Laborers,0.035792,Secondary / secondary special,0.0,Self-employed,0.2473981399468556,Married,N,0.0,0,3.0
+2,100013,Working,1.0528,1,Drivers,0.019101,Higher education,0.0,Others,0.22247729314302825,Married,Y,-856.0,0,4.0
+3,100028,Working,2.3333333333333335,1,Sales staff,0.026392,Secondary / secondary special,0.0,Business Entity Type 3,0.13351459645105895,Married,N,-1805.0,1,3.0
+4,100038,Working,1.0,1,Laborers,0.010032,Secondary / secondary special,0.0,Business Entity Type 3,0.16802147239263804,Married,Y,-821.0,0,0.0
+5,100042,State servant,1.1848,1,Drivers,0.025164,Secondary / secondary special,0.0,Government,0.1832401634057192,Married,Y,-1705.0,1,2.0
+6,100057,Working,1.3366024096385543,1,High skill tech staff,0.0228,Higher education,1.0,Industry: type 9,0.1546299071021876,Married,Y,-1182.0,0,1.0
+7,100065,Working,1.0,0,Core staff,0.005144,Higher education,0.0,Self-employed,0.14575451870533837,Single / not married,N,-1182.0,1,2.0
+8,100066,State servant,1.1584,0,Core staff,0.04622,Higher education,0.0,School,0.07948838669177652,Married,N,-829.0,0,5.0
+9,100067,Working,1.0,1,Sales staff,0.018634,Higher education,4.0,Others,0.25252525252525254,Civil marriage,Y,-1423.0,1,2.0

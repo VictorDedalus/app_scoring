@@ -1,0 +1,11 @@
+,SK_ID_CURR,0,1,2,3,4
+0,100001,Type de revenu,Rapport prêt-valeur,Densité de la région de résidence,Voiture possédée,Télephone maison fourni
+1,100005,Type de revenu,Type d'emploi,Rapport prêt-valeur,Niveau d'étude,Delta Application-Changement de télephone
+2,100013,Type de revenu,Type d'emploi,Rapport prêt-valeur,Densité de la région de résidence,Delta Application-Changement de télephone
+3,100028,Type de revenu,Type d'emploi,Rapport prêt-valeur,Niveau d'étude,Densité de la région de résidence
+4,100038,Type de revenu,Type d'emploi,Niveau d'étude,Delta Application-Changement de télephone,Densité de la région de résidence
+5,100042,Rapport prêt-valeur,Type d'emploi,Niveau d'étude,Densité de la région de résidence,Nb de demandes au bureau de crédit (1 an)
+6,100057,Type de revenu,Rapport prêt-valeur,Entourage avec défaut de plus de 30j,Densité de la région de résidence,Nb de demandes au bureau de crédit (1 an)
+7,100065,Type de revenu,Emploi de plus de 5 ans,Type d'entreprise,Statut familial,Densité de la région de résidence
+8,100066,Emploi de plus de 5 ans,Rapport prêt-valeur,Pourcentage de temps comme employé,Delta Application-Changement de télephone,Nb de demandes au bureau de crédit (1 an)
+9,100067,Type de revenu,Type d'emploi,Statut familial,Type d'entreprise,Entourage avec défaut de plus de 30j

@@ -3,6 +3,7 @@ import pandas as pd
 import pickle
 from flask import Flask, jsonify, request
 from sklearn.ensemble import RandomForestClassifier
+from waitress import serve
 app = Flask(__name__)
 
 @app.route('/api/users')
@@ -33,3 +34,6 @@ def get_shap_features():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+#if __name__ == '__main__':
+#    serve(app, host='0.0.0.0', port=8080)

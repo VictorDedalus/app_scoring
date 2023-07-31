@@ -18,7 +18,7 @@ def get_specific_data(user_id):
     app_test = pd.read_csv('application_test_cleaned.csv').drop(columns='Unnamed: 0')
     app_test_scaled = pd.read_csv('application_test_scaled.csv').drop(columns='Unnamed: 0')
     filename = "scoring_model.pkl"
-    model = pickle.load(open("modele/" + filename, 'rb'))
+    model = pickle.load(open(filename, 'rb'))
     result = model.predict_proba(app_test_scaled)[:,0]
     app_test_scaled['proba'] = result
     app_test_final = pd.merge(app_test, app_test_scaled[['proba']], left_index=True, right_index=True)

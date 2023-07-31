@@ -3,7 +3,7 @@ import pandas as pd
 import pickle
 from flask import Flask, jsonify, request
 from sklearn.ensemble import RandomForestClassifier
-from waitress import serve
+#from waitress import serve
 app = Flask(__name__)
 
 @app.route('/api/users')

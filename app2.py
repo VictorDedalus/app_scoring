@@ -1,10 +1,14 @@
 import numpy as np
 import pandas as pd
 import pickle
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, send_file
 from sklearn.ensemble import RandomForestClassifier
 #from waitress import serve
 app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return send_file("frontend.py")
 
 @app.route('/api/users')
 def get_list_of_users():

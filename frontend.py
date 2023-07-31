@@ -6,7 +6,7 @@ import json
 
 def main():
     st.title('Prêt à Dépenser - Scoring crédit')
-    response = requests.get('http://localhost:5000/api/users')
+    response = requests.get('https://appscoring-64fa312b31ec.herokuapp.com/api/users')
     data = response.json()
     list_users = data['users']
     user_id = st.selectbox('Choisissez un ID de demande de prêt', list_users)
@@ -14,7 +14,7 @@ def main():
         st.write("En attente d'un choix d'utilisateur")
     else:
         st.write('Vous avez choisi', user_id)
-        response2 = requests.get(f'http://localhost:5000/api/user/{user_id}')
+        response2 = requests.get(f'https://appscoring-64fa312b31ec.herokuapp.com/api/user/{user_id}')
         user_data = response2.json()
         df = pd.DataFrame(user_data)
         st.dataframe(df.drop(columns=['proba']))
@@ -27,7 +27,7 @@ def main():
                 else:
                     return 'Non accordé'
             st.write('Réponse à la demande de prêt :', result_loan(df['proba'].item()))
-            response3 = requests.get('http://localhost:5000/api/shap_features')
+            response3 = requests.get('https://appscoring-64fa312b31ec.herokuapp.com/api/shap_features')
             data2 = response3.json()
             df_shap = pd.DataFrame(data2)
             st.write('')

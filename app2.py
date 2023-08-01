@@ -9,7 +9,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    return "Prêt à Dépenser"
+
+@app.route('/dashboard')
+def streamlit_dashboard():
+    return render_template("streamlit.html")
 
 @app.route('/api/users')
 def get_list_of_users():

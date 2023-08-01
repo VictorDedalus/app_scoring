@@ -1,2 +1,2 @@
-web: gunicorn app2:app
-streamlit: waitress-serve --port $PORT streamlit:app
+web: sh setup.sh && streamlit run frontend.py
+api: gunicorn app2:app

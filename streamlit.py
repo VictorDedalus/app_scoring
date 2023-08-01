@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import json
 
-def app():
+def main():
     st.title('Prêt à Dépenser - Scoring crédit')
     #response = requests.get('http://127.0.0.1:8080/api/users')
     response = requests.get('https://appscoring-64fa312b31ec.herokuapp.com/api/users')
@@ -42,4 +42,4 @@ def app():
             st.write('')
 
 if __name__ == '__main__':
-    app()
+    main()

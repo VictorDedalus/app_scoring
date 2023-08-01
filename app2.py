@@ -2,15 +2,18 @@ import numpy as np
 import pandas as pd
 import pickle
 import os
-from flask import Flask, jsonify, request, send_file
+from flask import Flask, jsonify, request, render_template
 from sklearn.ensemble import RandomForestClassifier
 #from waitress import serve
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    os.system("streamlit run frontend.py")
-    return "Streamlit Dashboard"
+    return "Prêt à Dépenser"
+
+@app.route('/streamlit')
+def streamlit_dashboard():
+    return render_template("streamlit.html")
 
 @app.route('/api/users')
 def get_list_of_users():

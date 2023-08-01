@@ -1,2 +1,2 @@
-web: gunicorn app2:app
+server: gunicorn app2:app
 web: sh setup.sh && streamlit run frontend.py

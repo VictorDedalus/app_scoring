@@ -11,7 +11,7 @@ app = Flask(__name__)
 def index():
     return "Prêt à Dépenser"
 
-@app.route('/dashboard')
+@app.route('/streamlit')
 def streamlit_dashboard():
     return render_template("streamlit.html")
 

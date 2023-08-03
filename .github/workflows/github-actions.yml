@@ -24,20 +24,3 @@ jobs:
     # Lancer les tests Pytest
     - name: Run Pytests
       run: pytest tests/
-
-    - name: Set up .netrc for Heroku
-      run: |
-          echo machine api.heroku.com >> %USERPROFILE%\.netrc
-          echo   login $HEROKU_EMAIL >> %USERPROFILE%\.netrc
-          echo   password $HEROKU_API_KEY >> %USERPROFILE%\.netrc
-          echo machine git.heroku.com >> %USERPROFILE%\.netrc
-          echo   login $HEROKU_EMAIL >> %USERPROFILE%\.netrc
-          echo   password $HEROKU_API_KEY >> %USERPROFILE%\.netrc
-
-    # Déploiement sur Heroku
-    - name: Deploy to Heroku
-      uses: akhileshns/heroku-deploy@v3.12.14
-      with:
-        heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-        heroku_app_name: "appscoring-64fa312b31ec"
-        heroku_email: ${{secrets.HEROKU_EMAIL}}

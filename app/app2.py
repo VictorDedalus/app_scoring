@@ -7,6 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 #from waitress import serve
 app = Flask(__name__)
 
+
 @app.route('/api/users')
 def get_list_of_users():
     app_test = pd.read_csv('application_test_cleaned.csv').drop(columns='Unnamed: 0')

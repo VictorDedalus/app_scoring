@@ -1,0 +1,24 @@
+Ce projet génère par la librairie Flask un API. 
+
+Il est constitué du fichier app2.py, qui génère trois routes d'API :
+- '/api/users' : il s'agit d'un dataframe contenant les identifiants de
+tous les individus sélectionnables sur le Dashboard.
+- '/api/user/<user_id>' : après sélection d'un user_id sur le Dashboard, cette route fournit
+un Dataframe avec certaines données importantes de l'utilisateur sélectionné. Elle fournit également
+la probabilité de défaut de cet utilisateur. Elle s'appuie sur deux dataframes : application_test_scaled,
+et application_test_cleaned. Le premier a été modifié de manière à pouvoir être lu par notre modèle. 
+Le second ne contient que certaines colonnes importantes, qui ont été traduites en français pour
+être intelligibles. Les données n'ont pas été mises à l'échelle pour ne pas perdre leur signification ;
+quand elles étaient catégorielles, elles n'ont pas été encodées, pour la même raison.
+- '/api/shap_features' : cette route fournit un dataframe qui contient le top 5 des features des
+plus déterminants dans la prédiction pour chaque individu. Ce top 5 a préalablement été obtenu 
+par une analyse sur un notebook.
+
+Le fichier Procfile communique avec Heroku et lui dit comment exécuter le fichier. 
+
+Le fichier requirements.txt contient toutes les librairies nécessaires pour faire tourner le projet.
+A chaque déploiement, Heroku vérifie que ces librairies ont bien été installées. Leur version est 
+précisée pour éviter tout problème de compatibilité.
+
+Les csv qui servent à faire tourner le projet sont inclus dans le dossier. C'est également le cas du
+modèle entraîné sur Notebook : scoring_mode.pkl.

@@ -160,6 +160,8 @@ cython_debug/
 #.idea/
 
 # Large data
-data/*
-modele/*
 scoring_env/*
+
+# Poetry files
+.poetry.lock
+.pyproject.toml

@@ -163,5 +163,5 @@ cython_debug/
 scoring_env/*
 
 # Poetry files
-.poetry.lock
-.pyproject.toml
+poetry.lock
+pyproject.toml

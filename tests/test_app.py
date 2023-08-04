@@ -1,6 +1,6 @@
 import pytest
 from flask import Flask
-from ..app.app2 import app
+from ..app2 import app
 
 # Création d'une application Flask de test en utilisant la fixture de Pytest
 @pytest.fixture

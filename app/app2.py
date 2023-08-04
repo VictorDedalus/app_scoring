@@ -10,19 +10,16 @@ app = Flask(__name__)
 
 @app.route('/api/users')
 def get_list_of_users():
-    path = os.path.abspath(os.path.join("C:/Users/victo/Documents/OC/app_scoring_V2", 'application_test_cleaned.csv'))
-    app_test = pd.read_csv(path).drop(columns='Unnamed: 0')
+    app_test = pd.read_csv("/app_scoring_V2/application_test_cleaned.csv").drop(columns='Unnamed: 0')
     list_users = list(app_test['SK_ID_CURR'])
 
     return jsonify({'users': list_users})
 
 @app.route('/api/user/<user_id>')
 def get_specific_data(user_id):
-    path_test = os.path.abspath(os.path.join("C:/Users/victo/Documents/OC/app_scoring_V2", 'application_test_cleaned.csv'))
-    app_test = pd.read_csv(path_test).drop(columns='Unnamed: 0')
-    path_test_scaled = os.path.abspath(os.path.join("C:/Users/victo/Documents/OC/app_scoring_V2", 'application_test_scaled.csv'))
-    app_test_scaled = pd.read_csv(path_test_scaled).drop(columns='Unnamed: 0')
-    filename = os.path.abspath(os.path.join("C:/Users/victo/Documents/OC/app_scoring_V2", "scoring_model.pkl"))
+    app_test = pd.read_csv("/app_scoring_V2/application_test_cleaned.csv").drop(columns='Unnamed: 0')
+    app_test_scaled = pd.read_csv("/app_scoring_V2/application_test_scaled.csv").drop(columns='Unnamed: 0')
+    filename = "/app_scoring_V2/scoring_model.pkl"
     model = pickle.load(open(filename, 'rb'))
     result = model.predict_proba(app_test_scaled)[:,0]
     app_test_scaled['proba'] = result
@@ -33,8 +30,7 @@ def get_specific_data(user_id):
 
 @app.route('/api/shap_features')
 def get_shap_features():
-    path = os.path.abspath(os.path.join("C:/Users/victo/Documents/OC/app_scoring_V2", "shap_features.csv"))
-    shap_features = pd.read_csv(path).drop(columns='Unnamed: 0').to_json(orient="columns")
+    shap_features = pd.read_csv("/app_scoring_V2/shap_features.csv").drop(columns='Unnamed: 0').to_json(orient="columns")
     return shap_features
 
 

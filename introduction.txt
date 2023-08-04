@@ -1,6 +1,6 @@
 Ce projet génère par la librairie Flask un API. 
 
-Il est constitué du fichier app2.py, qui génère trois routes d'API :
+Il est avant tout constitué du fichier app2.py, qui génère trois routes d'API :
 - '/api/users' : il s'agit d'un dataframe contenant les identifiants de
 tous les individus sélectionnables sur le Dashboard.
 - '/api/user/<user_id>' : après sélection d'un user_id sur le Dashboard, cette route fournit
@@ -22,3 +22,19 @@ précisée pour éviter tout problème de compatibilité.
 
 Les csv qui servent à faire tourner le projet sont inclus dans le dossier. C'est également le cas du
 modèle entraîné sur Notebook : scoring_mode.pkl.
+
+Les fichiers __init__.py sont présents dans chaque sous-dossier et permettent de simplifier les problématiques de
+chemin de dossier : ils sont reconnus par Python comme autant de "racines" du projet.
+
+Le dossier tests contient un fichier Python qui lance 3 tests unitaires à chaque push. Ces 3 tests servent à tester
+si les trois routes de l'API fonctionnent normalement.
+
+Le dossier .github contient le dossier workflows, détecté par Github comme contenant les fichiers yml nécessaires
+au déploiement continu de l'application. A chaque push, les actions contenues dans ces fichiers sont exécutées.
+Ils sont au nombre de deux : githubactions.yml effectue les actions de base (vérifier que les librairies requises
+sont installées, l'intégration en elle-même) et lance les tests unitaires. L'autre fichier, main.yml, ne sert
+qu'à déployer le projet sur l'application Heroku.
+
+.gitignore est un fichier reconnu par Github qui sert à ignorer certains fichiers lors d'un push. Il contient
+les différents dossiers de cache et les fichiers liés à Poetry, librairie d'environnement virtuel dont je ne me
+sers qu'en local.
